@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 set rtp+=/home/vladimir/.local/lib/python2.7/site-packages/powerline/bindings/vim
 
