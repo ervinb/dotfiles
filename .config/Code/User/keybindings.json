@@ -1,5 +1,12 @@
 // Place your key bindings in this file to overwrite the defaults
 [
+    // restore find
+    {
+        "key": "ctrl+f",
+        "command": "actions.find"
+    },
+
+    // caps is esc
     {
         "key": "capslock",
         "command": "extension.vim_escape",
@@ -36,23 +43,13 @@
 
     // navigate with J and K in suggest menus
     {
-        "key": "j",
+        "key": "ctrl+j",
         "command": "selectNextSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
     {
-        "key": "down",
-        "command": "-selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "k",
+        "key": "ctrl+k",
         "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "up",
-        "command": "-selectPrevSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     },
 
