@@ -2,7 +2,7 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 """""""""""
@@ -35,8 +35,6 @@ Bundle "tpope/vim-rails"
 Bundle "tpope/vim-repeat"
 Bundle "tpope/vim-surround"
 Bundle "vim-scripts/Auto-Pairs"
-Bundle "vlasar/snipmate"
-Bundle "vlasar/snipmate-snippets"
 
 filetype plugin indent on
 
