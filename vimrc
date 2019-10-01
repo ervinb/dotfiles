@@ -35,8 +35,23 @@ Bundle "tpope/vim-rails"
 Bundle "tpope/vim-repeat"
 Bundle "tpope/vim-surround"
 Bundle "vim-scripts/Auto-Pairs"
+Bundle "junegunn/fzf.vim"
+Bundle "/usr/local/opt/fzf"
 
 filetype plugin indent on
+
+" reaching preferences
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+nnoremap <C-p> :Files<CR>
+nnoremap <Leader>p :Fi <c-r><c-w><CR>
+vnoremap <leader>p y:Fi <c-r>"<CR>
+
+nnoremap <C-f> :Rg<space>
+nnoremap <leader>f :Rg <c-r><c-w><CR>
+vnoremap <leader>f y:Rg <c-r>"<CR>
+
+command! -bang -nargs=* Fi call fzf#vim#files('.', {'options':'--query '.shellescape(<q-args>)})
+command! -bang -nargs=* Rg call fzf#vim#grep('rg --line-number --hidden --no-heading --color=always --smart-case '.shellescape(<q-args>),1, fzf#vim#with_preview({'options': '--delimiter : --nth 3..'}), <bang>0)
 
 runtime! bundle/snipmate-snippets/support_functions.vim
 runtime macros/matchit.vim
